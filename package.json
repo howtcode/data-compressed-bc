@@ -23,5 +23,8 @@
 	},
 	"dependencies": {
 		"dxt-js": "^0.0.3"
-	}
+	},
+	"files": [
+		"./index.js"
+	]
 }
