@@ -37,6 +37,7 @@
 		"./dist/**"
 	],
 	"scripts": {
+		"prepublish": "yarn build",
 		"start": "yarn build:module && node ./dist/index.js",
 		"build": "concurrently \"yarn build:module\" \"yarn build:node\" \"yarn build:browser\"",
 		"build:module": "rollup  --config",
