@@ -1,7 +1,7 @@
 {
 	"name": "@howt/compression-bc",
 	"version": "0.8.0",
-	"main": "dist/node/index.js",
+	"main": "dist/index.js",
 	"module": "dist/index.js",
 	"license": "MIT",
 	"type": "module",
@@ -33,9 +33,6 @@
 	"dependencies": {
 		"dxt-js": "^0.0.3"
 	},
-	"files": [
-		"./dist/**"
-	],
 	"scripts": {
 		"prepublish": "yarn build",
 		"start": "yarn build:module && node ./dist/index.js",
