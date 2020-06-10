@@ -1,16 +1,16 @@
-export default {
-	comments: true,
-	plugins: [
+{
+	"comments": true,
+	"plugins": [
 		[
 			"@babel/plugin-proposal-class-properties",
 			{
-				loose: true
+				"loose": true
 			}
 		],
 		[
 			"@babel/plugin-proposal-private-methods",
 			{
-				loose: true
+				"loose": true
 			}
 		],
 		"@babel/plugin-proposal-export-default-from",
@@ -19,31 +19,31 @@ export default {
 		[
 			"@babel/plugin-proposal-pipeline-operator",
 			{
-				proposal: "fsharp"
+				"proposal": "fsharp"
 			}
 		],
 		"@babel/plugin-proposal-throw-expressions",
 		[
 			"@babel/plugin-proposal-private-property-in-object",
 			{
-				loose: true
+				"loose": true
 			}
 		],
 		[
 			"@babel/plugin-syntax-module-attributes",
 			{
-				version: "may-2020"
+				"version": "may-2020"
 			}
 		]
 	],
-	presets: [
+	"presets": [
 		[
 			"@babel/preset-env",
 			{
-				targets: {
-					node: "14"
+				"targets": {
+					"node": "14"
 				}
 			}
 		]
 	]
-};
+}
