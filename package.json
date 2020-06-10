@@ -1,8 +1,8 @@
 {
 	"name": "@howt/compression-bc",
 	"version": "0.3.0",
-	"main": "dist/index.esm.js",
-	"module": "dist/index.esm.js",
+	"main": "dist/node/index.js",
+	"module": "dist/index.js",
 	"license": "MIT",
 	"type": "module",
 	"devDependencies": {
@@ -19,20 +19,29 @@
 		"@babel/plugin-transform-runtime": "^7.10.1",
 		"@babel/preset-env": "^7.10.2",
 		"@pumpn/eslint-config": "^4.0.0",
+		"@rollup/plugin-babel": "^5.0.3",
+		"@rollup/plugin-commonjs": "^13.0.0",
+		"@rollup/plugin-json": "^4.1.0",
+		"@rollup/plugin-node-resolve": "^8.0.1",
 		"babel-eslint": "^11.0.0-beta.2",
+		"concurrently": "^5.2.0",
 		"eslint": "^7.2.0",
-		"parcel": "^2.0.0-alpha.3.2"
+		"rollup": "^2.15.0",
+		"rollup-plugin-node-polyfills": "^0.2.1",
+		"rollup-plugin-terser": "^6.1.0"
 	},
 	"dependencies": {
 		"dxt-js": "^0.0.3"
 	},
 	"files": [
-		"./dist/index.esm.js"
+		"./dist/**.js"
 	],
 	"scripts": {
-		"build": "parcel build --target module --no-minify src/index.js",
-		"rundist": "node dist/index.js --no-deprecation",
-		"start": "parcel build --target main src/index.js --no-minify && yarn rundist",
+		"start": "yarn build:module && node ./dist/index.js",
+		"build": "concurrently \"yarn build:module\" \"yarn build:node\" \"yarn build:browser\"",
+		"build:module": "rollup  --config",
+		"build:node": "rollup  --config ./rollup/node/rollup.config.js",
+		"build:browser": "rollup  --config ./rollup/browser/rollup.config.js",
 		"docs": "rm -rf ./docs/ && jsdoc -c ./.jsdocrc -r --verbose"
 	}
 }
