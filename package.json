@@ -34,7 +34,7 @@
 		"dxt-js": "^0.0.3"
 	},
 	"files": [
-		"./dist/**.js"
+		"./dist/**"
 	],
 	"scripts": {
 		"start": "yarn build:module && node ./dist/index.js",
