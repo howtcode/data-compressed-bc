@@ -1,8 +1,10 @@
-import {
+import dxt from "dxt-js";
+
+const {
 	compress,
 	decompress,
 	flags
-} from "dxt-js";
+} = dxt;
 
 class BC {
 	static compress = (data, width, height, format = 1) => {
