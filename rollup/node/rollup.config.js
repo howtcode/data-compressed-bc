@@ -16,7 +16,6 @@ export default {
 			babelHelpers: "bundled"
 		}),
 		commonjs(),
-		json(),
-		terser()
+		json()
 	]
 };
