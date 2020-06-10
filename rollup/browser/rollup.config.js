@@ -7,8 +7,6 @@ import {
 } from "rollup-plugin-terser";
 import polyfills from "rollup-plugin-node-polyfills";
 
-import config from "../../babel.config.json";
-
 export default {
 	input: "./src/index.js",
 	output: {
@@ -18,7 +16,6 @@ export default {
 	},
 	plugins: [
 		babel({
-			...config,
 			babelHelpers: "bundled"
 		}),
 		commonjs(),

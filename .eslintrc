@@ -64,5 +64,14 @@
 	},
 	"parserOptions": {
 		"allowAwaitOutsideFunction": true
-	}
+	},
+	"overrides": [
+		{
+			"files": "babel.config.js",
+			"rules": {
+				"import/no-unused-modules": "off",
+				"import/no-commonjs": "off"
+			}
+		}
+	]
 }
