@@ -33,6 +33,9 @@
 	"dependencies": {
 		"dxt-js": "^0.0.3"
 	},
+	"files": [
+		"./dist/**"
+	],
 	"scripts": {
 		"prepublish": "yarn build",
 		"start": "yarn build:module && node ./dist/index.js",
