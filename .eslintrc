@@ -60,6 +60,19 @@
 					"|>": "before"
 				}
 			}
+		],
+		"id-length": [
+			"error",
+			{
+				"exceptions": [
+					"x",
+					"y",
+					"z",
+					"_"
+				],
+				"max": 35,
+				"min": 2
+			}
 		]
 	},
 	"parserOptions": {
